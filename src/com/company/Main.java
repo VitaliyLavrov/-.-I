@@ -16,7 +16,7 @@ public class Main {
         executorService.submit(new Runnable() {
             @Override
             public void run() {
-                System.out.println("Начало Метода с 1 потоком");
+
                 firstM();
 
             }
@@ -106,7 +106,7 @@ public class Main {
 
     static void firstM() {
         long a = System.currentTimeMillis();
-        System.out.print("конец метода с 1 потоком ==>   ");
+        System.out.print("начало метода с 1 потоком ==>   ");
         System.out.println(System.currentTimeMillis() - a);
         float[] arr = new float[SIZE];
         for (int i = 0; i < arr.length; i++) {
