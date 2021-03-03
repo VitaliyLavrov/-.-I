@@ -88,7 +88,7 @@ public class Main {
                                 HALF); //   сколько ячеек копируем)
                     }
                 }
-                System.out.println("склейка завершена многопоточный метод, время ==> " + (System.currentTimeMillis() - a));
+                System.out.println("склейка завершена! многопоточный метод, время ==> " + (System.currentTimeMillis() - a));
                 System.out.println("2й метод завершен  время ==> " + (System.currentTimeMillis() - a));
             }
 
