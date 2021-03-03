@@ -32,7 +32,7 @@ public class Main {
 
     }
 
-    private static void secondM(ExecutorService executorService) {
+     static void secondM(ExecutorService executorService) {
         long a = System.currentTimeMillis();
         System.out.println("начало многопоточного метода, время ==>   " + (System.currentTimeMillis() - a));
         Object lock1 = new Object();
@@ -73,7 +73,7 @@ public class Main {
         executorService.submit(new Runnable() {
             @Override
             public void run() {
-                System.out.println("ждем мониторов lock1 и lock2 многопоточный метод, время ==> " + (System.currentTimeMillis() - a));
+                System.out.println("ждем мониторов lock1 и lock2 для склейки масивов многопоточный метод, время ==> " + (System.currentTimeMillis() - a));
                 synchronized (lock1) {
                     System.out.println("монитор lock1 отрыт многопоточный метод, время ==> " + (System.currentTimeMillis() - a));
                     synchronized (lock2) {
@@ -114,7 +114,7 @@ public class Main {
             arr[i] = (float) (arr[i] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
         }
 
-        System.out.print("конец метода с 1 потоком ==>   ");
+        System.out.print("конец метода с 1 потоком ==> ");
         System.out.println(System.currentTimeMillis() - a);
     }
 
